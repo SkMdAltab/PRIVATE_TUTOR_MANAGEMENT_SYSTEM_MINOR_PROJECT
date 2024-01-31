@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.custom-ok-button-class {
+  background-color: #6b3ce3 !important;
+
+  /*sweet alertok button colot*/
+}
+
+
+.navbar-side {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  background-color: #343a40;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.navbar-side h6 {
+  color: #fff;
+  margin: 9px 0 10px 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+.navbar-side ul li {
+  list-style-type: none;
+}
+
+.navbar-side ul li a {
+  padding: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #ccc;
+  font-size: 1.1em;
+  width: 100%;
+  padding-left: 20px;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+  white-space: nowrap;
+}
+
+.navbar-side ul li a:hover,
+.navbar-side ul li a.link-active {
+  background-color: #212121;
+  border-left: 5px solid #ccc;
+}
+
+.navbar-side ul li a .icon {
+  padding-right: 10px;
+}
+
+.content {
+  margin-left: 200px;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.content #navBtn {
+  font-size: 20px;
+}
+
+.main.animate .navbar-side {
+  width: 60px;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.main.animate .navbar-side .link-text {
+  display: none;
+}
+
+.main.animate .navbar-side .myCaret {
+  display: none;
+}
+
+.main.animate .content {
+  margin-left: 60px;
+}
+
+.myBtn[aria-expanded="false"] .myCaret:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "f107";
+  float: right;
+  transition: all 0.5s;
+}
+
+.myBtn[aria-expanded="true"] .myCaret:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "f107";
+  float: right;
+  transition: all 0.5s;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+@media (max-width: 991px) {
+  .main .navbar-side {
+    width: 40px;
+    -webkit-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+    font-size: 0.8em;
+  }
+
+  .main .navbar-side .link-text {
+    display: none;
+  }
+
+  .main .navbar-side .caret {
+    display: none;
+  }
+
+  .main .navbar-side h6 {
+    margin: 9px 0 10px 9px;
+    font-size: 1.2em;
+    line-height: 1.9;
+  }
+
+  .main .navbar-side ul li a {
+    padding-left: 10px;
+  }
+
+  .main .navbar-side ul li a:hover,
+  .main .navbar-side ul li a.link-active {
+    border-left: 2px solid #ccc;
+  }
+
+  .main .content {
+    margin-left: 40px;
+  }
+
+  .main.animate .navbar-side {
+    width: 150px;
+    -webkit-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+  }
+
+  .main.animate .navbar-side .link-text {
+    display: inline-block;
+  }
+
+  .main.animate .navbar-side .caret {
+    display: block;
+  }
+
+  .main.animate .content {
+    margin-left: 150px;
+  }
+
+  .myCaret {
+    display: none;
+  }
+}
+
+
+y {
+  background-color: rgb(184, 109, 255);
+}
+
+.btn-primary {
+  /* background-color: #4e2ca5 !important; */
+  background: linear-gradient(to bottom, #6b3ce3, #4515f1);
+  border-color: transparent !important;
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to bottom, #4e3ac0, #123cd6);
+  border-color: transparent !important;
+  transform: scale(1.05);
+}
+
+.btn-primary:active {
+  background-color: #123cd6 !important;
+  border-color: transparent !important;
+}
+
+.bg-primary {
+  background-color: #6b3ce3 !important;
+}
+
+.border-primary {
+  border-color: #6b3ce3 !important;
+}
+
+
+/* back to top button start */
+.back-to-top {
+  position: fixed;
+  bottom: -40px;
+  right: 40px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background: #523adb;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  transform: scale(0.3);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.back-to-top:focus {
+  color: #fff;
+}
+
+.back-to-top.show {
+  bottom: 40px;
+  right: 40px;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.back-to-top.show:hover {
+  color: #fff;
+  bottom: 30px;
+  opacity: 1;
+}
+
+.arrow {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  transform: rotate(-90deg);
+  top: 30%;
+  left: 40%;
+}
+
+.arrow:nth-child(2) {
+  top: 42%;
+}
+
+@keyframes bounceAlpha {
+  0% {
+    opacity: 1;
+    transform: rotate(-90deg) translateX(0px) scale(1);
+  }
+
+  25% {
+    opacity: 0;
+    transform: rotate(-90deg) translateX(10px) scale(0.9);
+  }
+
+  26% {
+    opacity: 0;
+    transform: rotate(-90deg) translateX(-10px) scale(0.9);
+  }
+
+  55% {
+    opacity: 1;
+    transform: rotate(-90deg) translateX(0px) scale(1);
+  }
+}
+
+.back-to-top:hover .arrow {
+  animation-name: bounceAlpha;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.back-to-top:hover .arrow:nth-child(2) {
+  animation-name: bounceAlpha;
+  animation-duration: 1.4s;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@media only screen and (max-width: 575px) {
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .back-to-top.show {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .back-to-top.show:hover {
+    bottom: 10px;
+  }
+
+  .arrow {
+    top: 27%;
+    left: 37%;
+  }
+}
+
+/*back to strat button css end*/
